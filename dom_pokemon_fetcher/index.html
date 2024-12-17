@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Fetcher</title>
+</head>
+<style>
+    .caught {
+        text-decoration: line-through;
+    }
+</style>
+<body>
+    <ul id="pokemon-container"></ul>
+    <script>
+        /*
+        takes in a pokemon URL, fetches from that pokemon URL, 
+        and gives us the image of that pokemon
+        */
+        const getPokemonImage = async (url) => {
+            const response = await fetch(url);
+            const data = await response.json();
+            const imageURL = data.sprites.front_default;
+            return imageURL;
+        };
+
+        // function for fetching the data
+        const fetchData = async () => {
+            const pokemonApiUrl = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0";
+
+            const response = await fetch(pokemonApiUrl);
+            const data = await response.json();
+
+            data.results.forEach(async(pokemon) => {
+                // create a new li with pokemon.name
+                console.log(pokemon.name);
+                const ul = document.querySelector("#pokemon-container");
+                const li = document.createElement("li");
+                li.textContent = pokemon.name;
+
+                li.addEventListener("click", () => {
+                    li.classList.toggle("caught"); // easier to toggle classList than styles!
+                });
+
+                const url = pokemon.url;
+
+                const imageURL = await getPokemonImage(url);
+
+                const img = document.createElement("img");
+                img.src = imageURL;
+
+                // append that li into the ul
+                ul.appendChild(li);
+
+                li.appendChild(img);
+                console.log(imageURL);
+            });
+        };
+
+        fetchData();
+    </script>
+</body>
+</html>

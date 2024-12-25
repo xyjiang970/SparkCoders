@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/SparkCoders/react_and_useState/",
+  base: "/react_and_useState/",
   plugins: [react()],
 })

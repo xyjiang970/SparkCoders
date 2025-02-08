@@ -13,3 +13,6 @@ Replace JS and CSS links inside dist/index.html using the following structure:
 - "/SparkCoders/react-useState-useEffect-fetch-review/dist/assets/[filename from /assets].css"
 
 You can then view the live page (i.e. https://xyjiang970.github.io/SparkCoders/react-forms-pokemon-prj/dist/).
+
+
+cat requirements.txt | xargs npm install -g

@@ -14,7 +14,7 @@ export default function ButtonAppBar() {
       }}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link to="/home" style={{
+            <Link to="/SparkCoders/materialUI_review/dist/" style={{
                 color: "white",
                 textDecoration: "none",
                 display: "flex",
@@ -32,7 +32,7 @@ export default function ButtonAppBar() {
                 Maplestory Rankings
             </Link>
           </Typography>
-            <Link to="/search">
+            <Link to="/SparkCoders/materialUI_review/dist/search">
                 <IconButton color="inherit">
                     <SearchIcon style={{ fontSize:30 }} />
                 </IconButton>

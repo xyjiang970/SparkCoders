@@ -13,9 +13,9 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Navigate to="/home" replace />} />
-        <Route path="/home" element={<Homepage />} />
-        <Route path="/search" element={<Search />} />
+        {/* <Route path="/" element={<Navigate to="/home" replace />} /> */}
+        <Route path="/SparkCoders/materialUI_review/dist/" element={<Homepage />} />
+        <Route path="/SparkCoders/materialUI_review/dist/search" element={<Search />} />
       </Routes>
     </div>
   );

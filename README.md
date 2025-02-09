@@ -15,9 +15,10 @@ Replace JS and CSS links inside dist/index.html using the following structure:
 You can then view the live page (i.e. https://xyjiang970.github.io/SparkCoders/react-forms-pokemon-prj/dist/).
 
 
-Using npm to mass download all requirements in txt file:
+Using npm to mass download all requirements in txt file (first line for linux, second line for powershell):
 ```bash
 cat requirements.txt | xargs npm install -g
+Get-Content requirements.txt | ForEach-Object { npm install -g $_ }
 ```
 
 In React, we create our applications using: 

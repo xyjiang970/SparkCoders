@@ -1,3 +1,28 @@
+1. 
+```bash
+mkdir [foldername]
+```
+2. 
+```bash
+npm init -y
+```
+3. 
+```bash
+npm i express nodemon
+
+or
+
+#  Mac/ Linux
+cat requirements.txt | xargs npm install -g
+
+# Windows
+Get-Content requirements.txt | ForEach-Object { npm install -g $_ }
+```
+4. 
+```bash
+touch server.js
+```
+
 Must be included if using nodemon!
 ```json
 "start:development": "nodemon server.js" 

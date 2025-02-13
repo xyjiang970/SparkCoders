@@ -21,6 +21,10 @@ Get-Content requirements.txt | ForEach-Object { npm install -g $_ }
 4. 
 ```bash
 touch server.js
+
+or 
+
+ni server.js
 ```
 
 Must be included if using nodemon!

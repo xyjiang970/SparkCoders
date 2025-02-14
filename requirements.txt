@@ -1,8 +1,12 @@
+# Frontend
 react-router-dom
-express
-nodemon
 @mui/material 
 @emotion/react 
 @emotion/styled
 @mui/icons-material
 @material-ui/styles
+
+# Backend
+express
+nodemon
+cors

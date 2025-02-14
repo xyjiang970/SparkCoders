@@ -1,0 +1,7 @@
+# Include:
+!.gitignore
+!.gitignore_global
+
+# Exclude:
+.env
+.DS_store

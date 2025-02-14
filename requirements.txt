@@ -1,4 +1,4 @@
-# Frontend
+# Common Frontend
 react-router-dom
 @mui/material 
 @emotion/react 
@@ -6,7 +6,9 @@ react-router-dom
 @mui/icons-material
 @material-ui/styles
 
-# Backend
+# Common Backend
 express
 nodemon
 cors
+@prisma/client 
+prisma

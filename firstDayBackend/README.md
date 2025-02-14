@@ -27,19 +27,20 @@ or
 # Assuming you have requirements.txt file set up already with what to download:
 
 #  Mac/ Linux
-cat requirements.txt | xargs npm install -g
-xargs npm install -g < requirements.txt
+cat requirements.txt | xargs npm install --save
+xargs npm install --save < requirements.txt
+npm install $(cat requirements.txt) --save
 
-# Windows (neither works so far, not sure why)
-Get-Content requirements.txt | ForEach-Object { npm install -g $_.Trim() }
-npm install -g $(Get-Content requirements.txt | ForEach-Object { $_ })
+# Windows
+Get-Content requirements.txt | ForEach-Object { npm install $_ --save }
+npm install $(Get-Content requirements.txt -Raw) --save
 
 # To set up requirements.txt:
 ## > (Overwrite): This operator redirects the output of a command and overwrites the contents of the specified file. If the file does not exist, it will be created.
-echo express nodemon react-router-dom > requirements.txt
+echo express nodemon cors > requirements.txt
 
 ## >> (Append): This operator redirects the output of a command and appends it to the end of the specified file. If the file does not exist, it will be created.
-echo express nodemon react-router-dom >> requirements.txt
+echo express nodemon cors >> requirements.txt
 ```
 
 4. 

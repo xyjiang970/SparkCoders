@@ -17,8 +17,14 @@ You can then view the live page (i.e. https://xyjiang970.github.io/SparkCoders/r
 
 Using npm to mass download all requirements in txt file (first line for linux, second line for powershell):
 ```bash
-cat requirements.txt | xargs npm install -g
-Get-Content requirements.txt | ForEach-Object { npm install -g $_ }
+# Mac
+cat requirements.txt | xargs npm install --save
+xargs npm install --save < requirements.txt
+npm install $(cat requirements.txt) --save
+
+# Windows 
+Get-Content requirements.txt | ForEach-Object { npm install $_ --save }
+npm install $(Get-Content requirements.txt -Raw) --save
 ```
 
 In React, we create our applications using: 
@@ -34,6 +40,8 @@ npm init -y
 Node is our server that will serve all of our frontend requests. Next, cd into the project folder and run:
 ```bash
 npm install express
+or 
+npm i express
 ```
 
 To run script file:

@@ -23,8 +23,66 @@ app.get("/characters", async (req, res, next) => {
     }
 });
 
+// update A character
+/*
+Note:
+PATCH (200) -> small update, updates a portion of character info.
+PUT (201) -> updates the ENTIRE character (all info!)
+*/
+app.patch("/characters/:id", async (req, res, next) => {
+    try {
+        const updatedCharacter = await prisma.Character.update({
+            where: {
+                id: Number(req.params.id)
+            },
+            data: {
+                name: req.body.name,
+                avatar: req.body.avatar,
+                level: req.body.level
+            }
+        });
+        
+        res.status(200).send(updatedCharacter);
+    } catch (error) {
+        next(error);
+    }
+});
+
+// get A characters
+app.get("/characters/:id", async (req, res, next) => {
+    try {
+        const character = await prisma.Character.findUnique({
+            where: {
+                id: Number(req.params.id)
+            },
+            include: {
+                equips: true
+            }
+        });
+
+        res.send(character);
+    } catch (error) {
+        next(error);
+    }
+});
+
+app.delete("/characters/:id", async (req, res, next) => {
+    try {
+        await prisma.Character.delete({
+            where: {
+                id: Number(req.params.id)
+            }
+        });
+        // 204 means "no content"
+        res.sendStatus(204);
+    } catch (error) {
+        next(error);
+    }
+});
+
 // create A character
-app.post("/character", async (req, res, next) => {
+// note that POST request makes a whole new row in db!
+app.post("/characters", async (req, res, next) => {
     try {
         // prisma.[TABLE NAME].create({data{}})
         const character = await prisma.Character.create({
@@ -59,7 +117,8 @@ app.get("/equips", async (req, res, next) => {
 });
 
 // create A equip
-app.post("/equip", async (req, res, next) => {
+// note that POST request makes a whole new row in db!
+app.post("/equips", async (req, res, next) => {
     try {
         // prisma.[TABLE NAME].create({data{}})
         const equip = await prisma.Equip.create({
@@ -73,6 +132,47 @@ app.post("/equip", async (req, res, next) => {
         });
         
         res.status(201).send(equip);
+    } catch (error) {
+        next(error);
+    }
+});
+
+// update A equip
+/*
+Note:
+PATCH (200) -> small update, updates a portion of character info.
+PUT (201) -> updates the ENTIRE character (all info!)
+*/
+app.patch("/equips/:id", async (req, res, next) => {
+    try {
+        const updatedEquip = await prisma.Equip.update({
+            where: {
+                id: Number(req.params.id)
+            },
+            data: {
+                name: req.body.name,
+                attack: req.body.attack,
+                stars: req.body.stars,
+
+                characterID: req.body.characterID
+            }
+        });
+        
+        res.status(200).send(updatedEquip);
+    } catch (error) {
+        next(error);
+    }
+});
+
+app.delete("/equips/:id", async (req, res, next) => {
+    try {
+        await prisma.Equip.delete({
+            where: {
+                id: Number(req.params.id)
+            }
+        });
+        // 204 means "no content"
+        res.sendStatus(204);
     } catch (error) {
         next(error);
     }

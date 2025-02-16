@@ -28,7 +28,8 @@ For Windows users:
 npx prisma migrate dev --name initial_seeding
 ``` 
 (you don't exactly need to call it "initial seeding", you can name it anything you want here).
-5. After database + table + schema is created:
+
+After database + table + schema is created:
 ```bash
 npx prisma studio
 ```

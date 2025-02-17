@@ -1,5 +1,3 @@
-# Connecting frontend w/ backend
-
 1. 
 ```bash 
 npm init -y

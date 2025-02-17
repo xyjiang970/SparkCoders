@@ -7,8 +7,12 @@ app.use(cors());
 const {PrismaClient} = require("@prisma/client");
 const prisma = new PrismaClient(); // interact with prisma db
 
-app.get("/", (req, res) => {
-    res.send("new");
+app.get("/", async (req, res, next) => {
+    try {
+        res.send("hello world")
+    } catch (error) {
+        next(error);
+    }
 }); 
 
 app.listen(3000); 

@@ -7,7 +7,6 @@ import Games from "../components/Games";
 import SingleGame from "../components/SingleGame";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>

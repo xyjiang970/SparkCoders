@@ -10,5 +10,8 @@ axios
 express
 nodemon
 cors
-@prisma/client 
+@prisma/client
 prisma
+dotenv
+axios
+qs

@@ -1,0 +1,1 @@
+express nodemon cors @prisma/client prisma dotenv axios

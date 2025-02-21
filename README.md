@@ -37,8 +37,8 @@ npm install $(Get-Content requirements.txt -Raw) --save
 npm create vite@latest
 ```
 
-Name project: frontend
-Choose: React w/ JavaScript
+- Name project: frontend
+- Language: Choose React w/ JavaScript
 
 2.
 
@@ -120,8 +120,8 @@ npm run start:dev
 
 ## DB Setup Workflow:
 
-Link to [installing Postgres on Mac](https://www.youtube.com/watch?v=wTqosS71Dc4).
-Link to [installing Postgres on Windows](https://www.youtube.com/watch?v=HmziePvMwkE).
+- Link to [installing Postgres on Mac](https://www.youtube.com/watch?v=wTqosS71Dc4).
+- Link to [installing Postgres on Windows](https://www.youtube.com/watch?v=HmziePvMwkE).
 
 Note:
 

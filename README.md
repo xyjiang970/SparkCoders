@@ -127,7 +127,8 @@ npx prisma init --datasource-provider postgresql
 ```
 
 2. In the .env file, change the DATABASE_URL string to your Postgres configuration:
-   <u>**For MAC Users:**</u>
+
+   <u><b>For MAC Users:</b></u>
 
    1. In your .env file:
       DATABASE_URL="postgresql://postgres:postgres@localhost:5432/[DESIRED DB NAME]
@@ -140,7 +141,7 @@ npx prisma init --datasource-provider postgresql
 
    You don't exactly need to call it "initial seeding", you can name it anything you want here.
 
-   <u>**For WINDOWS Users:**</u>
+   <u><b>For WINDOWS Users:</b></u>
 
    1. In your .env file:
       DATABASE_URL="postgresql://postgres:[YOUR PASSWORD]@localhost:5432/[DESIRED DB NAME]"

@@ -120,6 +120,16 @@ npm run start:dev
 
 ## DB Setup Workflow:
 
+Link to [installing Postgres on Mac](https://www.youtube.com/watch?v=wTqosS71Dc4).
+Link to [installing Postgres on Windows](https://www.youtube.com/watch?v=HmziePvMwkE).
+
+Note:
+
+- Don't install pgAdmin!
+- Don't forget your password!!
+- Port should be default at: 5432
+- Locale should be default
+
 1.
 
 ```bash
@@ -128,7 +138,7 @@ npx prisma init --datasource-provider postgresql
 
 2. In the .env file, change the DATABASE_URL string to your Postgres configuration:
 
-   <u><b>For MAC Users:</b></u>
+   ### For MAC Users:
 
    1. In your .env file:
       DATABASE_URL="postgresql://postgres:postgres@localhost:5432/[DESIRED DB NAME]
@@ -141,7 +151,7 @@ npx prisma init --datasource-provider postgresql
 
    You don't exactly need to call it "initial seeding", you can name it anything you want here.
 
-   <u><b>For WINDOWS Users:</b></u>
+   ### For WINDOWS Users:
 
    1. In your .env file:
       DATABASE_URL="postgresql://postgres:[YOUR PASSWORD]@localhost:5432/[DESIRED DB NAME]"

@@ -5,6 +5,7 @@ axios
 @emotion/react 
 @emotion/styled
 @mui/icons-material
+qs
 
 # Common Backend
 express

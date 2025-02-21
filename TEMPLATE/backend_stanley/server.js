@@ -33,15 +33,3 @@ app.get("/githubcallback", async (req, res) => {
 });
 
 app.listen(3000);
-
-/**
- *
- * environment variable
- *
- * a way to keep a "secret key"
- * a way to have different variables across different environments
- *
- * development environment might need client ID Ov23lipJRgMxRM97ZMVq
- *
- * production environment might need another client ID
- */

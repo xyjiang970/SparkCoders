@@ -1,6 +1,0 @@
-# tells github to ignore .env when uploading your project
-.env
-
-# tells github to ignore node_modules when uploading your project
-# if you want it back, just npm i
-node_modules

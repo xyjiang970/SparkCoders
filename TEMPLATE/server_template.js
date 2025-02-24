@@ -5,6 +5,8 @@ const axios = require("axios");
 app.use(express.json());
 app.use(cors());
 require("dotenv").config();
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 
 const {PrismaClient} = require("@prisma/client");
 //const prisma = new PrismaClient(); // interact with prisma db

@@ -1,6 +1,6 @@
-import { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './App.css';
-import { Routes, Route, Link, useParams } from "react-router-dom";
+import { Routes, Route, Link, useParams, Navigate, useSearchParams } from "react-router-dom";
 import axios from "axios";
 
 function App() {

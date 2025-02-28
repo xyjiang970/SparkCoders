@@ -27,7 +27,60 @@ Recall:
 
 - POST: creates a new resource on the server.
 */
-// note the async here!
+app.post("/games", async (req, res, next) => {
+    // bring in token
+    const token = req.headers.authorization;
+
+    // get ID of user, given that I have their token:
+    // decode token
+    const user = jwt.decode(token, "LUNA");
+
+    //console.log(user.id);
+
+    try {
+        await prisma.game.create({
+            data: {
+                name: req.body.gameName,
+                userID: user.id
+            }
+        });
+        // 1. Send the single game that was just created [CONVENTIONAL]
+
+        // 2. Get all the games this user owns, and sends that [will use this for now]
+        res.send(
+            await prisma.Game.findMany({
+                where: {
+                    userID: user.id
+                }
+            })
+        );
+
+    } catch (error) {
+        next(error);
+    };
+});
+
+// get all the games that our user owns
+app.get("/games", async (req, res, next) => {
+    // bring in token
+    const token = req.headers.authorization;
+
+    // get ID of user, given that I have their token:
+    // decode token
+    const user = jwt.decode(token, "LUNA");
+
+    try {
+        const games = await prisma.Game.findMany({
+            where: {
+                userID: user.id
+            }
+        });
+        res.send(games);
+    } catch (error) {
+        next(error);
+    }
+});
+
 app.post("/register", async (req, res, next) => {
     // 1. Get the username and password from req.body:
     const {username, password} = req.body;
@@ -38,7 +91,7 @@ app.post("/register", async (req, res, next) => {
 
     try {
         // 3. Actually create your user:
-        const newUser = await prisma.user.create({
+        const newUser = await prisma.User.create({
             data: {
                 username: username,
                 password: hashedPassword
@@ -65,7 +118,7 @@ app.post("/login", async (req, res, next) => {
     specify unique username in prisma.schema file
     in the User table.
     */
-    const user = await prisma.user.findUnique({
+    const user = await prisma.User.findUnique({
         where: {
             username
         }

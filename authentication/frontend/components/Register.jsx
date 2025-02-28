@@ -7,6 +7,8 @@ const Register = ( {setUser} ) => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
+    //const [error, setError] = useState(null);
+
     const register = async (event) => {
         event.preventDefault(); // prevents refreshing and adding "?" at end of URL
 
@@ -67,6 +69,7 @@ const Register = ( {setUser} ) => {
                     onChange={(event) => setUsername(event.target.value)} 
                 />
                 <input placeholder='Password' value={password} 
+                    type='password'
                     onChange={(event) => setPassword(event.target.value)} 
                 />
                 <button>Register</button>

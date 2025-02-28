@@ -18,3 +18,4 @@ axios
 jsonwebtoken
 bcrypt
 qs
+faker

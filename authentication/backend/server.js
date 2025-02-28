@@ -57,6 +57,47 @@ app.post("/register", async (req, res, next) => {
     };
 });
 
+app.post("/login", async (req, res, next) => {
+    const {password, username} = req.body;
+
+    /*
+    Will have to use findFirst here if we did not 
+    specify unique username in prisma.schema file
+    in the User table.
+    */
+    const user = await prisma.user.findUnique({
+        where: {
+            username
+        }
+    });
+
+    if (!user) {
+        res.status(401).send({
+            message: "No User Found. Create Account Instead!"
+        })
+        //res.sendStatus(401);
+    } else {
+        // check if password is correct:
+        // two args:
+        // 1. unhashed password (user typed)
+        // 2. hashed password (password stored in db)
+        // tells you whether they typed in the correct password
+        const isCorrectPassword = bcrypt.compareSync(password, user.password);
+        
+        // if correct, then send user the token
+        if (isCorrectPassword) {
+            const token = jwt.sign(user, "LUNA");
+            res.send(token);
+        } else {
+            // if not correct, then send error saying wrong password
+            // 401 means unauthorized
+            res.status(401).send({message: "Incorrect password!"}); 
+        }
+
+    };
+
+});
+
 // if you make get request to /account with token,
 // that means you can get user data
 app.get("/account", async (req, res, next) => {
@@ -69,8 +110,12 @@ app.get("/account", async (req, res, next) => {
     const user = jwt.decode(token, "LUNA");
 
     // 3. Send user data
-    res.send(user);
-
+    if (user) {
+        res.send(user);
+    } else {
+        res.sendStatus(401);
+    };
+    
 });
 
 app.listen(3000); 

@@ -12,6 +12,7 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // allows you to auto log in whenever you refresh your page
     const token = window.localStorage.getItem("token");
 
     const tryToLogin = async () => {
@@ -66,7 +67,7 @@ function App() {
 
       <Routes>
       
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login setUser={setUser} />}  />
         <Route path="/register" element={<Register setUser={setUser} />} />
 
         {/* passing user as prop here: */}

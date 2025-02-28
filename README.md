@@ -86,7 +86,7 @@ ni server.js
 4.
 
 ```bash
-echo express nodemon cors @prisma/client prisma dotenv axios bcrypt jsonwebtoken qs > requirements.txt
+echo express nodemon cors @prisma/client prisma dotenv axios bcrypt jsonwebtoken qs faker > requirements.txt
 ```
 
 5.

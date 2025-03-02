@@ -1,6 +1,7 @@
 # Common Frontend
 react-router-dom
 axios
+socket.io-client
 @mui/material 
 @emotion/react 
 @emotion/styled
@@ -16,6 +17,7 @@ prisma
 dotenv
 axios
 jsonwebtoken
+socket.io
 bcrypt
 qs
 faker

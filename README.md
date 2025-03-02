@@ -43,7 +43,7 @@ npm create vite@latest
 2.
 
 ```bash
-echo react-router-dom axios @mui/material @emotion/react @emotion/styled @mui/icons-material qs > requirements.txt
+echo react-router-dom axios socket.io-client @mui/material @emotion/react @emotion/styled @mui/icons-material qs > requirements.txt
 ```
 
 3.
@@ -86,7 +86,7 @@ ni server.js
 4.
 
 ```bash
-echo express nodemon cors @prisma/client prisma dotenv axios bcrypt jsonwebtoken qs faker > requirements.txt
+echo express nodemon cors @prisma/client prisma dotenv axios bcrypt jsonwebtoken socket.io qs faker > requirements.txt
 ```
 
 5.

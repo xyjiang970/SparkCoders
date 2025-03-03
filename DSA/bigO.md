@@ -1,11 +1,13 @@
 # Big O Notation
 
-![alt text](image.png)
+![alt text](bigOgraph.jpg)
 
 **_Big O Time Complexity:_** The worse case for how long this algo will take to run.
 
 
 **_Big O Space Complexity:_** The worst case for how much new space the algo. will need.
+
+![alt text](comparison.jpg)
 
 <table>
   <tr>
@@ -58,9 +60,6 @@
     <td>Linearithmic (loglinear, quasilinear)</td>
     <td>Performing a fast Fourier transform; fastest possible comparison sort (Merge Sort, Heap Sort, QuickSort worst case); convex hull computation (Graham's scan); priority queue operations in a binary heap</td>
   </tr>
-
-  ![alt text](comparison.jpg)
-
   <tr style="background-color: yellow;">
     <td>O(N²)</td>
     <td>Quadratic</td>

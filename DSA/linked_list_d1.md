@@ -6,6 +6,7 @@
 2. [Classes](#classes)
 3. [Singly Linked List Setup](#singly-linked-list-setup)
    - [Queue](#queue)
+   - [Iterating through a Linked List](#iterating-through-a-linked-list)
    - [Doubly Linked List](#doubly-linked-list)
 
 ## Time Complexity Table (Most Relevant in Real World Scenarios)
@@ -88,7 +89,7 @@ class Node {
   }
 }
 const head = new Node(1); // new node with value of 1
-console.log(node); // output: Node { value: 1, next: null }
+console.log(head); // output: Node { value: 1, next: null }
 
 const node2 = new Node(2);
 ```
@@ -104,7 +105,7 @@ class Node {
   }
 }
 const head = new Node(1); // new node with value of 1
-console.log(node); // output: Node { value: 1, next: null }
+console.log(head); // output: Node { value: 1, next: null }
 
 const node2 = new Node(2);
 head.next = node2;
@@ -118,9 +119,9 @@ console.log(head); // output: Node { value: 1, next: Node { value: 2, next: null
 <u>Array-Based Queues:</u>
 
 FIFO = First in, first out
-LILO = Last in, last out
-Remove from front: array.unshift( ) O(N)
-Insert from back: array.push( ) O(1)
+
+- Remove from front: array.unshift( ) O(N)
+- Insert from back: array.push( ) O(1)
 
 <u>For Linked Lists Queues:</u>
 
@@ -136,6 +137,16 @@ Singly Linked List is the common choice for queue implementation, but if you nee
 
 In a singly linked list, you only need a reference to the head and, optimally, the tail. You don't need to worry about backwards traversal because queue operations (FIFO) only require manipulation at the front and back.
 
+#### Iterating through a Linked List
+
+```javascript
+// head is still truthy (if it is not null)
+// if at any point head is null, break out of the while loop
+while (head) {
+  head = head.next;
+}
+```
+
 ### Doubly Linked List
 
 <img src="images/doubly_linked_list.jpg" alt="doubly_linked_list" width="700"/>
@@ -143,3 +154,13 @@ In a singly linked list, you only need a reference to the head and, optimally, t
 A doubly linked list could be used if you want to optimize for **both ends** (i.e. if you need to access or remove nodes from the front and back frequently).
 
 It provides O(1) access to both ends because each node has a reference to both the next and previous node, so both **enqueuing** and **dequeuing** would be O(1) from either end.
+
+<img src="images/doubly_linked_list2.jpg" alt="doubly_linked_list2" width="700"/>
+
+<img src="images/doubly_linked_list3.jpg" alt="doubly_linked_list3" width="700"/>
+
+<br />
+<!-- Link to Table of Contents -->
+<a href="#table-of-contents" style="display: inline-block; text-align: center; margin-top: 20px; font-size: 16px; padding: 10px; text-decoration: none; background-color: #007bff; color: white; border-radius: 5px;">
+  Go to Table of Contents
+</a>

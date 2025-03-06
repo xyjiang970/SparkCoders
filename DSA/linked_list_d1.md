@@ -4,8 +4,9 @@
 
 1. [Time Complexity Table (Most Relevant in Real World Scenarios)](#time-complexity-table-most-relevant-in-real-world-scenarios)
 2. [Classes](#classes)
-3. [Linked List Setup](#linked-list-setup)
-4. [Queue](#queue)
+3. [Singly Linked List Setup](#singly-linked-list-setup)
+   - [Queue](#queue)
+   - [Doubly Linked List](#doubly-linked-list)
 
 ## Time Complexity Table (Most Relevant in Real World Scenarios)
 
@@ -73,7 +74,7 @@ class Game {
 }
 ```
 
-## Linked List Setup
+## Singly Linked List Setup
 
 <img src="images/linkedlist.jpg" alt="linkedlist" width="500"/>
 <img src="images/linkedlist2.jpg" alt="linkedlistheadandnull" width="500"/>
@@ -112,11 +113,33 @@ console.log(head); // output: Node { value: 1, next: Node { value: 2, next: null
 
 <img src="images/linkedlist4.jpg" alt="arrow_to_next_node" width="500"/>
 
-## Queue
+### Queue
 
-FIFO = First in, first out | Remove from front | array.unshift O(N)
-LILO = Last in, last out | Insert from back | array.push O(1)
+<u>Array-Based Queues:</u>
 
-<u>For Linked Lists:</u>
-Remove from front: O(1)
-Insert from back: O(1)
+FIFO = First in, first out
+LILO = Last in, last out
+Remove from front: array.unshift( ) O(N)
+Insert from back: array.push( ) O(1)
+
+<u>For Linked Lists Queues:</u>
+
+Remove from front: dequeue O(1)
+Insert from back: enqueue O(1)
+
+- **Dequeue** (Remove from the front)
+  You maintain a pointer tot he **head** (front), so removing the first node is O(1).
+- **Enqueue** (Insert at the back)
+  You maintain a pointer to the **tail** (back) of the list, so adding a new node at the end is O(1).
+
+Singly Linked List is the common choice for queue implementation, but if you need to optimize for more complex operations at both ends (e.g., dequeuing from both front and back), a doubly linked list could be a better choice. Singly linked list are generally more space-efficient since it only requires a reference to the next node in each node.
+
+In a singly linked list, you only need a reference to the head and, optimally, the tail. You don't need to worry about backwards traversal because queue operations (FIFO) only require manipulation at the front and back.
+
+### Doubly Linked List
+
+<img src="images/doubly_linked_list.jpg" alt="doubly_linked_list" width="700"/>
+
+A doubly linked list could be used if you want to optimize for **both ends** (i.e. if you need to access or remove nodes from the front and back frequently).
+
+It provides O(1) access to both ends because each node has a reference to both the next and previous node, so both **enqueuing** and **dequeuing** would be O(1) from either end.

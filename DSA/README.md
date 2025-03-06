@@ -13,3 +13,7 @@
 ## 6. [More BFS, DFS, and Recursion](bfs_dfs_recursion.md)
 
 ## 7. [Even More Binary Tree and Recursion](more_binary_tree_recursion.md)
+
+## 8. [Graphs Day 1](graphsD1.md)
+
+## 9. [Graphs Day 2](graphsD2.md)

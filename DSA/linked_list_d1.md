@@ -71,7 +71,7 @@ class Game {
 <img src="images/linkedlist.jpg" alt="linkedlist" width="500"/>
 <img src="images/linkedlist2.jpg" alt="linkedlistheadandnull" width="500"/>
 
-```javascript
+```JavaScript
 // definition of a node
 class Node {
   constructor(value) {
@@ -86,3 +86,18 @@ const node2 = new Node(2);
 ```
 
 <img src="images/linkedlist3.jpg" alt="head_and_node2_creation" width="500"/>
+
+```javascript
+// definition of a node
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+const head = new Node(1); // new node with value of 1
+console.log(node); // output: Node { value: 1, next: null }
+
+const node2 = new Node(2);
+head.next = node2;
+```

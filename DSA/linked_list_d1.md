@@ -129,7 +129,7 @@ Remove from front: dequeue O(1)
 Insert from back: enqueue O(1)
 
 - **Dequeue** (Remove from the front)
-  You maintain a pointer tot he **head** (front), so removing the first node is O(1).
+  You maintain a pointer to the **head** (front), so removing the first node is O(1).
 - **Enqueue** (Insert at the back)
   You maintain a pointer to the **tail** (back) of the list, so adding a new node at the end is O(1).
 

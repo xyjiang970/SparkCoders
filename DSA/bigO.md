@@ -1,12 +1,12 @@
 # Big O Notation
 
-<img src="images/bigOgraph.jpg" alt="bigOcomparison_2" width="800"/>
+<img src="images/bigOgraph.jpg" alt="bigOcomparison" width="800"/>
 
 **_Big O Time Complexity:_** The worse case for how long this algo will take to run.
 
 **_Big O Space Complexity:_** The worst case for how much new space the algo. will need.
 
-<img src="images/comparison.jpg" alt="bigOcomparison_2" width="800"/>
+<img src="images/bigOcomparison_2.jpg" alt="bigOcomparison_2" width="800"/>
 
 <table>
   <tr>

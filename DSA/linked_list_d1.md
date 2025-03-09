@@ -160,6 +160,37 @@ It provides O(1) access to both ends because each node has a reference to both t
 <img src="images/doubly_linked_list3.jpg" alt="doubly_linked_list3" width="700"/>
 
 <br />
+<br />
+
+<a href="https://leetcode.com/problems/linked-list-cycle/description/" target="\_blank">Leetcode: Linked List Cycle</a>
+
+```JavaScript
+/*
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+
+/*
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+var hasCycle = function(head) {
+    while (head) {
+        if (head.marked === true) {
+            return true;
+        }
+        head.marked = true;
+        head = head.next;
+    }
+    return false;
+};
+```
+
+<br />
+
 <!-- Link to Table of Contents -->
 <a href="#table-of-contents" style="display: inline-block; text-align: center; margin-top: 20px; font-size: 16px; padding: 10px; text-decoration: none; background-color: #007bff; color: white; border-radius: 5px;">
   Go to Table of Contents

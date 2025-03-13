@@ -1,5 +1,13 @@
 # Binary Trees, BFS, DFS
 
+## Table of Contents
+
+- [Binary Tree](#binary-tree)
+- [Binary Search Tree](#binary-search-tree)
+- [Iterating through Binary Trees](#iterating-through-binary-trees)
+  - [DFS](#dfs)
+  - [BFS](#bfs)
+
 ## Binary Tree
 
 <img src="images/simple_binary_tree.jpg" alt="simple binary tree" width="500"/>
@@ -200,3 +208,10 @@ var invertTree = function(root) {
     return root;
 };
 ```
+
+<br>
+
+<!-- Link to Table of Contents -->
+<a href="#table-of-contents" style="display: inline-block; text-align: center; margin-top: 20px; font-size: 16px; padding: 10px; text-decoration: none; background-color: #007bff; color: white; border-radius: 5px;">
+  Go to Table of Contents
+</a>

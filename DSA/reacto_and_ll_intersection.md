@@ -1,3 +1,7 @@
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 # REACTO and Linked List Intersection
 
 <a href="https://leetcode.com/problems/intersection-of-two-linked-lists/description/" target="\_blank">Leetcode: Intersection of Two Linked Lists</a>
@@ -112,5 +116,5 @@ var getIntersectionNode = function(headA, headB) {
 };
 ```
 
-- Time Complexity: \( O( \max (M, N)) \)
-- Space Complexity: \( O(1) \)
+- Time Complexity: $O(\max(M, N))$
+- Space Complexity: $O(1)$

@@ -1,8 +1,0 @@
-markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
-
-# For including custom scripts in the HTML template
-include:
-  - _includes/mathjax.html

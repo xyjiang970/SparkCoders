@@ -44,12 +44,12 @@ var getIntersectionNode = function(headA, headB) {
 
 ## REACTO
 
-R - Restate the problem
-E - Examples
-A - Approach(es)
-C - Code (the solution interviewer says yes to)
-T - Test your solution
-O - Optimize your solution
+- R - Restate the problem
+- E - Examples
+- A - Approach(es)
+- C - Code (the solution interviewer says yes to)
+- T - Test your solution
+- O - Optimize your solution
 
 ## Solving the Question Using Constant Space O(1):
 
@@ -112,5 +112,5 @@ var getIntersectionNode = function(headA, headB) {
 };
 ```
 
-Time Complexity: $O(\max(M, N))$
-Space Complexity: $O(1)$
+- Time Complexity: \(O(\max(M, N))\)
+- Space Complexity: \(O(1)\)

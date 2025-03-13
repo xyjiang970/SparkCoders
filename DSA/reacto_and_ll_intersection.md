@@ -112,5 +112,5 @@ var getIntersectionNode = function(headA, headB) {
 };
 ```
 
-- Time Complexity: \(O(\max(M, N))\)
-- Space Complexity: \(O(1)\)
+- Time Complexity: \( O( \max (M, N)) \)
+- Space Complexity: \( O(1) \)

@@ -1,6 +1,6 @@
 # REACTO and Linked List Intersection
 
-<a href="https://leetcode.com/problems/intersection-of-two-linked-lists/description/" target="\_blank">Leetcode: Intersection of Two Linked Lists</a>
+<a href="https://leetcode.com/problems/intersection-of-two-linked-lists/description/" target="_blank">Leetcode: Intersection of Two Linked Lists</a>
 
 <img src="images/linked_list_intersection.jpg" alt="linked_list_intersection" width="350"/>
 

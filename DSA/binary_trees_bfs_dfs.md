@@ -28,6 +28,23 @@ Rules:
 - Node on left has to be less than (<) root
 - Node on right has to be greater than or equal (>=) to root
 
+Definitions:
+
+**Binary Tree:** A binary tree is a tree data structure where each node has at most two children: a left child and a right child. There are no specific rules on how the nodes are arranged, meaning the left and right children of a node can have any value.
+
+**Binary Search Tree (BST):** A binary search tree is a special type of binary tree. It follows a strict ordering rule:
+
+- For any node, all the values in the **left subtree** are smaller than the node's value.
+- All the values in the **right subtree** are **greater** than the node's value. This ordering rule must hold true for every node in the tree.
+
+<img src="images/bt_bst.jpg" alt="bt_bst" width="800"/>
+
+**Balanced Binary Tree:**
+<img src="images/balanced_binary_tree.jpg" alt="balanced_binary_tree" width="800"/>
+
+**Balanced Binary Search Tree:**
+<img src="images/balanced_binary_search_tree.jpg" alt="balanced_binary_search_tree" width="800"/>
+
 ## Iterating through Binary Trees
 
 There are four different ways of iterating through binary trees (traversing - touching every single node in the tree).
@@ -126,7 +143,7 @@ const bfs = (node) => {
 
 <br>
 
-<a href="https://leetcode.com/problems/invert-binary-tree/description/" target="\_blank">Leetcode: Invert Binary Tree</a>
+<a href="https://leetcode.com/problems/invert-binary-tree/description/" target="_blank">Leetcode: Invert Binary Tree</a>
 
 ```JavaScript
 /** USING DFS

@@ -162,7 +162,7 @@ It provides O(1) access to both ends because each node has a reference to both t
 <br />
 <br />
 
-<a href="https://leetcode.com/problems/linked-list-cycle/description/" target="\_blank">Leetcode: Linked List Cycle</a>
+<a href="https://leetcode.com/problems/linked-list-cycle/description/" target="_blank">Leetcode: Linked List Cycle</a>
 
 ```JavaScript
 /*

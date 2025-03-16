@@ -40,9 +40,11 @@ Definitions:
 <img src="images/bt_bst.jpg" alt="bt_bst" width="800"/>
 
 **Balanced Binary Tree:**
+
 <img src="images/balanced_binary_tree.jpg" alt="balanced_binary_tree" width="800"/>
 
 **Balanced Binary Search Tree:**
+
 <img src="images/balanced_binary_search_tree.jpg" alt="balanced_binary_search_tree" width="800"/>
 
 ## Iterating through Binary Trees
